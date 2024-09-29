@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <form method="post">
+        <div id="navigationDiv">
+            <ul>
+                <li><a class="button" style="width:110px" href="index.html">Home</a></li>
+                <li><a class="button" style="width:110px" href="product.html">Products</a></li>
+                <li><a class="button" style="width:110px" href="feedback.html">Feedback</a></li>
+                <li><a class="button" style="width:110px" href="faq.html">FAQS</a></li>
+                <li><a class="button" style="width:110px" href="contact.html">Contact Us</a></li>
+                <li class="txtNav"> <input type="text" name="txtSearch" /> </li>
+                <li class="searchNav"> <input type="submit" name="btnSearch" value="" onclick="searchProducts()"/> </li>
+            </ul>
+        </div>
+    </form>
+
+   
+
+    <main>
+        <form id="feedbackForm">
+            <div class="form-group"></div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City of Residence:</label>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="india">India</option>
+                    <option value="Kenya">Kenya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="complain">Upload Complain:</label>
+                <input type="file" id="complain" name="complain">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback/Inquiries:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    
+
+    <div id="footerDiv">
+        <p>
+            &copy; 2024 Marula Home Decor. All Rights Reserved. | Design by <a href="https://www.mua254.marulahomedecor.net">Mua Emmanuel Mwongela</a>
+        </p>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

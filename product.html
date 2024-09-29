@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Products</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .category {
+            flex: 1 1 300px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .category h2 {
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+    <script>
+        function shuffleItems(folderPath) {
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                const images = category.querySelectorAll('img');
+                images.forEach(img => {
+                    const currentSrc = img.src;
+                    const currentFileName = currentSrc.substring(currentSrc.lastIndexOf('/') + 1);
+                    const currentIndex = parseInt(currentFileName.match(/\d+/)[0]);
+                    const nextIndex = currentIndex + 1;
+                    const nextSrc = `${folderPath}/${currentFileName.replace(currentIndex, nextIndex)}`;
+                    img.src = nextSrc;
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <div id="navigationDiv">
+                <ul>
+                    <li><a class="button" style="width:110px" href="index.html">Home</a></li>
+                    <li><a class="button" style="width:110px" href="product.html">Products</a></li>
+                    <li><a class="button" style="width:110px" href="feedback.html">Feedback</a></li>
+                    <li><a class="button" style="width:110px" href="faq.html">FAQS</a></li>
+                    <li><a class="button" style="width:110px" href="contact.html">Contact Us</a></li>
+                    <li class="txtNav"> <input type="text" name="txtSearch" /> </li>
+                    <li class="searchNav"> <input type="submit" name="btnSearch" value="" onclick="searchProducts()" /> </li>
+                </ul>
+            </div>
+        </form>
+        <div class="container">
+            <div class="category">
+                <h2 onclick="shuffleItems('css/images/chairs')">Chairs</h2>
+                <img src="css/images/chairs/bigChair1.jpg" alt="chair1">
+                <img src="css/images/chairs/bigChair10.jpg" alt="Chair2">
+            </div>
+            <div class="category">
+                <h2 onclick="shuffleItems('css/images/beds')">Beds</h2>
+                <img src="css/images/beds/bed2.jpg" alt="Bed1">
+                <img src="css/images/beds/bed3.jpg" alt="Bed2">
+            </div>
+            <div class="category">
+                <h2 onclick="shuffleItems('css/images/chests')">Chests</h2>
+                <img src="css/images/chests/bigChest1.jpg" alt="chest 1">
+                <img src="css/images/chests/bigChest2.jpg" alt="chest 2">
+            </div>
+            <div class="category">
+                <h2 onclick="shuffleItems('css/images/office')">Office</h2>
+                <img src="css/images/office/of2.jpeg" alt="Office 1">
+                <img src="css/images/office/of5.jpeg" alt="Office 2">
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <div id="footerDiv">
+        <p>
+            &copy; 2024 Marula Home Decor. All Rights Reserved. | Design by <a href="https://www.mua254.marulahomedecor.net">Mua Emmanuel Mwongela</a>
+        </p>
+    </div>
+</body>
+</html>

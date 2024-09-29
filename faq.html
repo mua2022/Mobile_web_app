@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Marula Furniture Store</title>
+    <link href="css/faq.css" rel="stylesheet" type="text/css" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div>
+    <form method="post">
+        <div id="navigationDiv">
+            <ul>
+                <li><a class="button" style="width:110px" href="index.html">Home</a></li>
+                <li><a class="button" style="width:110px" href="product.html">Products</a></li>
+                <li><a class="button" style="width:110px" href="feedback.html">Feedback</a></li>
+                <li><a class="button" style="width:110px" href="faq.html">FAQS</a></li>
+                <li><a class="button" style="width:110px" href="contact.html">Contact Us</a></li>
+                <li class="txtNav"> <input type="text" name="txtSearch" /> </li>
+                <li class="searchNav"> <input type="submit" name="btnSearch" value="" onclick="searchProducts()"/> </li>
+            </ul>
+        </div>
+    </form>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <h2>What is Marula Furniture Store?</h2>
+            <p>Marula Furniture Store is a leading retailer of high-quality furniture, offering a wide range of products to suit all tastes and budgets.</p>
+        </div>
+        <div class="faq">
+            <h2>What types of furniture do you offer?</h2>
+            <p>We offer a variety of furniture including sofas, beds, dining tables, chairs, and more. Our products are designed to meet the needs of both residential and commercial customers.</p>
+        </div>
+        <div class="faq">
+            <h2>Do you offer delivery services?</h2>
+            <p>Yes, we offer delivery services for all our products. Delivery charges may vary based on the location and size of the order.</p>
+        </div>
+        <div class="faq">
+            <h2>What is your return policy?</h2>
+            <p>We have a 30-day return policy for all our products. Items must be returned in their original condition and packaging. Please contact our customer service for more details.</p>
+        </div>
+    </div>
+</div>
+    <script>
+        document.querySelectorAll('.faq h2').forEach(item => {
+            item.addEventListener('click', () => {
+                const p = item.nextElementSibling;
+                p.style.display = p.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+     <script src="js/scripts.js"></script>
+     <div id="footerDiv">
+        <p>
+            &copy; 2024 Marula Home Decor. All Rights Reserved. | Design by <a href="https://www.mua254.marulahomedecor.net">Mua Emmanuel Mwongela</a>
+        </p>
+    </div>
+
+</body>
+</html>

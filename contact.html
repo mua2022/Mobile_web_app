@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .map {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .contact-info, .working-hours, .social-media {
+            margin-bottom: 20px;
+        }
+        .social-media a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <form method="post">
+                <div id="navigationDiv">
+                    <ul>
+                        <li><a class="button" style="width:110px" href="index.html">Home</a></li>
+                        <li><a class="button" style="width:110px" href="product.html">Products</a></li>
+                        <li><a class="button" style="width:110px" href="feedback.html">Feedback</a></li>
+                        <li><a class="button" style="width:110px" href="faq.html">FAQS</a></li>
+                        <li><a class="button" style="width:110px" href="contact.html">Contact Us</a></li>
+                        <li class="txtNav"> <input type="text" name="txtSearch" /> </li>
+                        <li class="searchNav"> <input type="submit" name="btnSearch" value="" onclick="searchProducts()"/> </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="container main">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.99088178692!2d36.709724296325675!3d-1.326639942049177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b5d1dde43e1%3A0xf488095851ad11f4!2sTree%20Ln%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1727619814711!5m2!1sen!2ske"
+             width="100%" height="100%" style="border:0;" allowfullscreen="" aria-hidden="false" table-index="0" ></iframe>
+            
+        </div>
+        <div style="display: flex; flex-direction: column;"></div>
+            <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: marulahomedecor@gmail.com</p>
+            <p>Phone: +254 70 456 7890</p>
+            <p>Address: Tree Lane Karen, Nairobi, Kenya</p>
+            </div>
+            <div class="working-hours">
+            <h2>Working Hours</h2>
+            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+            <p>Saturday: 10:00 AM - 3:00 PM</p>
+            <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            
+            <div style="display: flex; align-items: center;">
+                <a href="https://www.facebook.com" target="_blank"><img src="css/images/fb.jpeg" width="20" height="20"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="css/images/twitter.png" width="20" height="20"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="css/images/ins.jpeg" width="20" height="20"></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <div id="footerDiv"></div>
+        <p>
+            &copy; 2024 Marula Home Decor. All Rights Reserved. | Design by <a href="https://www.mua254.marulahomedecor.net">Mua Emmanuel Mwongela</a>
+        </p>
+    </div>
+</body>
+</html>

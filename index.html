@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home page | MARULA HOME DECOR
+        </title>
+        <link href="css/home.css" rel="stylesheet" type="text/css" />
+        <script>
+            const products = [
+                { name: 'chests', category: 'Chests' },
+                { name: 'office', category: 'Office' },
+                { name: 'Bed', category: 'Beds' },
+                { name: 'Chair', category: 'Chairs' },
+               
+            ];
+    
+            function searchProducts() {
+                const searchField = document.getElementById('searchField').value.toLowerCase();
+                const productList = document.getElementById('productList');
+                productList.innerHTML = '';
+    
+                const filteredProducts = products.filter(product => product.category.toLowerCase().includes(searchField));
+    
+                if (filteredProducts.length > 0) {
+                    filteredProducts.forEach(product => {
+                        const productDiv = document.createElement('div');
+                        productDiv.className = 'product';
+                        productDiv.textContent = product.name + ' - ' + product.category;
+                        productList.appendChild(productDiv);
+                    });
+                } else {
+                    productList.textContent = 'No products found';
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <!-- <div id="headerDiv">
+                <span id="welcomeSpan"><a id="aWelcome" href="account.html">Welcome, Customer </a></span>
+               
+            </div> -->
+            <form method="post">
+                <div id="navigationDiv">
+                    <ul>
+                        <li><a class="button" style="width:110px" href="index.html">Home</a></li>
+                        <li><a class="button" style="width:110px" href="product.html">Products</a></li>
+                        <li><a class="button" style="width:110px" href="feedback.html">Feedback</a></li>
+                        <li><a class="button" style="width:110px" href="faq.html">FAQS</a></li>
+                        <li><a class="button" style="width:110px" href="contact.html">Contact Us</a></li>
+                        <li class="txtNav"> <input type="text" name="txtSearch" /> </li>
+                        <li class="searchNav"> <input type="submit" name="btnSearch" value="" onclick="searchProducts()" /> </li>
+                    </ul>
+                </div>
+            </form>
+            <div id="container">
+                <h1>Welcome to Marula Home Decor</h1>
+                <p>
+                    We are a home decor company that specializes in providing high-quality home decor products to our customers.
+                    Our products are designed to make your home look beautiful and stylish.
+                    We offer a wide range of products including furniture, rugs, bedding, curtains, and accessories.
+                    Our products are made from the finest materials and are designed to last for many years.
+                    We are committed to providing our customers with the best products and service possible.
+                    We hope you enjoy shopping with us!
+                </p>
+                <h2>Our Products</h2>
+                <p>
+                    We offer a wide range of products including furniture, rugs, bedding, curtains, and accessories.
+                    Our products are designed to make your home look beautiful and stylish.
+                    We use the finest materials to create our products and they are designed to last for many years.
+                    Our products are available in a variety of styles and colors to suit your taste and budget.
+                    We are committed to providing our customers with the best products and service possible.
+                    We hope you enjoy shopping with us!
+                </p>
+            </div>
+            <div id="indexBoxDiv1">
+                <div id="imgSlides">
+                    <img class="imgFirst" src="css/images/imgCenter1W650xH366.jpg" width="650" height="366" alt="" />
+                    <img class="imgOthers" src="css/images/imgCenter2W650xH366.jpg" width="650" height="366" alt="" />
+                    <img class="imgOthers" src="css/images/imgCenter3W650xH366.jpg" width="650" height="366" alt="" />
+                    <img class="imgOthers" src="css/images/imgCenter4W650xH366.jpg" width="650" height="366" alt="" />
+                    <img class="imgOthers" src="css/images/imgCenter5W650xH366.jpg" width="650" height="366" alt="" />
+                </div>
+
+                <ul id="ulThumbs">
+                    <li><a href="#"><img src="css/images/imgThumb1W116xH65.jpg" width="116" height="65" alt="thumbImage" /></a></li>
+                    <li><a class="middleThumb" href="#"><img src="css/images/imgThumb2W116xH65.jpg" width="116" height="65" alt="" /></a></li>
+                    <li><a class="middleThumb" href="#"><img src="css/images/imgThumb3W116xH65.jpg" width="116" height="65" alt="" /></a></li>
+                    <li><a class="middleThumb" href="#"><img src="css/images/imgThumb4W116xH65.jpg" width="116" height="65" alt="" /></a></li>
+                    <li><a href="#"><img src="css/images/imgThumb5W116xH65.jpg" width="116" height="65" alt="thumbImage" /></a></li>
+                </ul>
+            </div>
+            <!-- END OF BOX DIV 1 -->
+
+            <div id="indexBoxDiv2">
+                <div id="content1">
+                    <!--World Class Service-->
+                </div>
+                <div id="content2">
+                    <div id="prodNavBG">
+                        <ul id="prodNav">
+                            <li><a id="right" href=""></a></li>
+                            <li>
+                                <h6>FEATURED PRODUCTS </h6>
+                            </li>
+                            <li><a id="left" href=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div id="featuredSlides">
+                        <div class="slide">
+                            <a href="prodInfo.html?prodId=04&amp;type=bed"> <img src="css/images/bed/bed4.jpg" width="158" height="158" alt="" /> </a>
+                            <a href="prodInfo.html?prodId=13&amp;type=chair"> <img src="css/images/chair/chair1.jpg" width="158" height="158" alt="" /> </a>
+                            <a href="prodInfo.html?prodId=03&amp;type=bed"> <img src="css/images/bed/bed3.jpg" width="158" height="158" alt="" /> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF BOX DIV 2 -->
+            
+            <div id="indexBoxDiv3">
+                <h4> <span class="orange"> MARULA &reg;</span> Home Furniture and Decoration</h4>
+                <p>
+                    We are one of the most successful retailers of luxury house furniture in Kenya. Our shop was established in 2021 and now
+                    is a leading retailer of house and office furniture and decoration. Our online shop has a large selection of beds, chairs,
+                    and storage cabinets. For those who want to create the most relaxing atmosphere and peace of mind in their homes, MARULA home decor furniture shop
+                    is the perfect place to start. We are located in Nairobi, Karen Tree-lane, Kenya, and strive to offer the best possible customer satisfaction
+                    with an unrivaled choice of products and peace of mind. Our sales teams are known for their highly reliable support and commitment.
+                    Make an effort to get in touch with us today.
+                </p>
+                <p>
+                    <a href="index.html">Home</a> | <a href="product.html">Products</a> | <a href="contact.html">About Us</a> | <a href="faqs.html">FAQS</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="footerDiv">
+            <p>
+                &copy; 2024 Marula Home Decor. All Rights Reserved. | Design by <a href="https://www.mua254.marulahomedecor.net">Mua Emmanuel Mwongela</a>
+            </p>
+        </div>
+    </body>
+</html>
